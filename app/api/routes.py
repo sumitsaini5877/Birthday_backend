@@ -13,3 +13,9 @@ def get_memoories(db:Session= Depends(get_db)):
 
     memories = db.query(Memory).all()
     return memories
+
+@router.get("/")
+def root():
+    return{
+        "status":"sucess"
+    }
